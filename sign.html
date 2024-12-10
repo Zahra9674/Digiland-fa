@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGILAND</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body dir="rtl">
+    <section id="home">
+        <nav class="navbar navbar-expand-sm   fixed-top ">
+            <div class="icon ">
+              <a href="./login.html" class="btn btn-light "   id="loginbtn"> ورود | ثبت نام</a>
+              <i class="fa-solid fa-basket-shopping"></i>            <i class="fa-solid fa-magnifying-glass"></i> 
+              <i class="fa-solid fa-circle-half-stroke" id="dark"></i>
+
+            </div>
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./main.html" >صفحه اصلی</a>
+                  </li>
+                  <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      محصولات
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="./laptop.html">لپتاپ      <i class="fa-solid fa-laptop"></i></a>
+                      <a class="dropdown-item" href="./mobile.html">موبایل       <i class="fa-solid fa-mobile-screen-button"></i></a>
+                      <a class="dropdown-item" href="./camera.html">دوربین <i class="fa-solid fa-camera"></i></a>
+                    </div>
+                  </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./sale.html"  style="color: red;">تخفیفات</a>
+                    
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./maghalat.html" >راهنمای خرید</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about.html" >درباره ما</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./tamas.html" >تماس با ما</a>
+                  </li>
+                 
+             
+                
+                  
+                
+                </ul>
+            
+
+                <a class="navbar-brand" href="javascript:void(0)"><img src="./img/Capture.PNG" alt=""></a>
+
+
+              </div>
+            </div>
+          </nav><br><br><br><br><br>
+          <div class="container mt-3" style="background-color:rgb(253, 252, 249);height: 850px;width: 400px;margin-bottom: 20px;  border-color: rgb(247, 179, 76);border-style: solid;
+">
+ 
+ <form action="/action_page.php">
+
+  <div class="mb-3 mt-3">
+    <div class="row">
+        <div class="col text-center mt-5"><img src="./img/unnamed.png" class="img-fluid rounded-circle" style="width: 100px;height: 100px;" alt=""></div>
+       </div>
+       <br>
+  
+
+       <center><h2 style="color: rgb(15, 15, 15);">ثبت نام</h2></center>
+
+    <label for="name">نام:</label>
+    <input type="text" class="form-control" id="name" onkeypress="nameInputHandler(event)" placeholder="" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="family">نام خانوادگی:</label>
+    <input type="text" class="form-control" id="family"  onkeypress="nameInputHandler(event)" placeholder="" name="ln">
+  </div>
+  <div class="mb-3">
+    <label for="email">ایمیل:</label>
+    <input type="email" class="form-control" id="email" dir="ltr" onkeypress="show(event)" placeholder="*******@gmail.com" name="email">
+  </div>
+  <div class="mb-3">
+    <label for="tele">شماره تماس:</label>
+    <input type="tel" class="form-control" id="tele" onkeypress="validatePhoneNumber(event)" placeholder="" name="pn">
+  </div>
+  <div class="mb-3">
+    <label for="pwd"> رمز عبور:</label>
+    <input type="password" class="form-control" id="pwd" onkeyup="pass(event)" placeholder="" name="pswd">
+  </div>
+  <div class="mb-3">
+    <label for="pwd1">تکرار رمز عبور:</label>
+    <input type="password" class="form-control" id="pwd1" onkeyup="match(event)" placeholder="" name="pswd">
+    <p id="message"></p>
+  </div>
+  <div class="form-check mb-3">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" name="remember" style="color: orange;"> من را بخاطر بسپار
+    </label>
+  </div>
+ <center><button type="button" onclick="register()" class="btn " style="background-color:  rgb(247, 187, 58);">ثبت</button></center>
+ <br/>
+
+</form>
+          </div>
+                <hr style="width: 100%;">
+                <footer>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-4 col-lg-4" id="tamas">
+                        <h3 style="margin-left: 15px;">تماس با ما</h3>
+                        <a href=""><img src="./img/images (5).png" alt="">تهران-میدان ولیعصر-پلاک 83 </a>
+
+        
+        <a href="mailto:example@example.com"><img src="./img/печать-201003176.webp" alt="">Digiland@gmail.com</a>
+        
+        <a href="tel:+1234567890"><img src="./img/nody-وکتور-آرم-1677479713.png" alt="">021-33347566</a>
+        
+        <a href="https://wa.me/1234567890"><img src="./img/nody-لوگو-png-واتساپ-1677765608.png" alt="">WhatsApp</a>
+                
+                      </div>
+                      <div class="col-sm-12 col-md-4 col-lg-4" id="banner"><img src="./img/Capture.PNG" class="img-fluid" alt="">
+                        <br><div class="social col-12">
+                        <a href="#"> <i class="fab fa-facebook "></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a></div>
+                      </div>
+                      <div class="col-sm-12 col-md-4 col-lg-4" id="links" >
+                        <h3 style="margin-left: 15px;">لینک ها</h3>
+                        <a href="#home">صفحه اصلی</a>
+                        <a href="#sale">محصولات</a>
+                        <a href="#sale">باشگاه مشتریان</a>
+                        <a href="#sale">حقوق مشتریان</a>
+                
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+                <script>
+                    persian = { 0: '۰', 1: '۱', 2: '۲', 3: '۳', 4: '۴', 5: '۵', 6: '۶', 7: '۷', 8: '۸', 9: '۹' };
+function traverse(el) {
+    if (el.nodeType == 3) {
+        var list = el.data.match(/[0-9]/g);
+        if (list != null && list.length != 0) {
+            for (var i = 0; i < list.length; i++)
+                el.data = el.data.replace(list[i], persian[list[i]]);
+        }
+    }
+    for (var i = 0; i < el.childNodes.length; i++) {
+        traverse(el.childNodes[i]);
+    }
+}
+traverse(document.body);
+        
+                    
+                    function nameInputHandler(input) {
+    const persianRegex = /^[\u0600-\u06FF]+$/;  
+   
+    
+
+}
+
+                    function show(e){
+      let email=document.querySelector('#email').value;
+      if(validateemail(email)){
+      
+        document.querySelector("#email").style.borderColor="green"
+      }else{
+     
+       document.querySelector("#email").style.borderColor="red"
+      }
+      return email
+    }
+    function validateemail(email){
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      return emailRegex.test(email)
+    }
+
+
+   
+    function validatePhoneNumber(phone) {
+    
+    const phoneRegex = /^09\d{9}$/; 
+    return phoneRegex.test(phone);
+}
+
+function pass(e){
+      
+      let password=document.querySelector('#pwd').value;
+      console.log(password)
+      if(validatepassword(password)){
+      
+        document.querySelector("#pwd").style.borderColor="green"
+      }else{
+      
+       document.querySelector("#pwd").style.borderColor="red"
+      }
+      return password
+    }
+    function validatepassword(password){
+      const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$/;
+      return passwordRegex.test(password)
+    }
+
+
+  function match(e){
+    let password = document.querySelector('#pwd').value;
+    let password2=document.querySelector('#pwd1').value;
+    
+
+    if(password2==password){
+      document.querySelector('#pwd1').style.borderColor="green"
+
+     
+
+    }else
+    document.querySelector('#pwd1').style.borderColor="red"
+      document.querySelector('#message').style.color="red"
+  }
+
+
+  function register() {
+
+    let password = document.querySelector('#pwd').value;
+    let password2 = document.querySelector('#pwd1').value;
+    let email = document.querySelector('#email').value;
+    let phone = document.querySelector('#tele').value;
+    
+    let newcustomer = {};
+    let nameInput = document.querySelector('#name').value;
+let familyInput = document.querySelector('#family').value;
+    if(!nameInputHandler(nameInput)&& !nameInputHandler(familyInput)){
+      alert("نام و نام خانوادگی به درستی وارد کنید(از حروف فارسی استفاده کنید)")
+      return;
+    }
+
+    if (password !== password2) {
+        alert("عدم تطابق رمز عبور!");
+        return;
+    }
+
+    if (!validatepassword(password)) {
+        alert("رمز عبور نامناسب!");
+        return;
+    }
+
+    if (!validateemail(email)) {
+        alert("ایمیل نامعتبر است!");
+        return;
+    }
+
+    if (!validatePhoneNumber(phone)) {
+        alert("شماره تماس نامعتبر!");
+        return;
+    }
+    else{
+      alert("به دیجی لند خوش آمدید")
+      newcustomer['name'] = document.querySelector('#name').value;
+    newcustomer['family'] = document.querySelector('#family').value;
+    newcustomer['email'] = email;
+    newcustomer['phone'] = phone;
+    console.log(newcustomer);
+
+  
+    }
+    
+    
+    
+}
+
+    
+    
+                    </script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
